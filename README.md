@@ -126,11 +126,13 @@ $ forge coverage
 Deploy to Anvil:
 
 ```sh
-$ forge script script/Deploy.s.sol --broadcast --fork-url http://localhost:8545
+$ forge script script/Deploy.s.sol --broadcast -- --url http://localhost:8545
 ```
 
-For this script to work, you need to have a `MNEMONIC` environment variable set to a valid
+For this script to work, you need to 
+1. have a `MNEMONIC` environment variable set to a valid
 [BIP39 mnemonic](https://iancoleman.io/bip39/).
+2. have an [Anvil](https://github.com/foundry-rs/foundry/tree/master/crates/anvil) instance running: `$ anvil`
 
 For instructions on how to deploy to a testnet or mainnet, check out the
 [Solidity Scripting](https://book.getfoundry.sh/tutorials/solidity-scripting.html) tutorial.
